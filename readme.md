@@ -10,7 +10,7 @@ To use ChatGPT hosted by Pawan, you can use the following steps:
 ### Installation
 
 ```bash
-npm install pawan-openai
+npm install pawan_openai
 ```
 
 ### Usage (See [OpenAI API Docs](https://github.com/openai/openai-node)) for more details.
