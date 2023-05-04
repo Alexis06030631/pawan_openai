@@ -1,3 +1,32 @@
 {
-
+	"name": "pawan_openai",
+	"version": "1.0.0",
+	"description": "An extension of the OpenAI module to use it with the Pawan API without worrying about IP errors.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"openai",
+		"pawan",
+		"api",
+		"wrapper"
+	],
+	"author": "Alexis06030631",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:Alexis06030631/pawan_openai.git",
+		"directory": "src",
+		"branch": "main",
+		"tag": "v1.0.0"
+	},
+	"bugs": {
+		"url": "https://github.com/Alexis06030631/pawan_openai/issues"
+	},
+	"homepage": "https://github.com/Alexis06030631/pawan_openai/",
+	"dependencies": {
+		"axios":"^1.4.0",
+		"openai":"^3.2.1"
+	}
 }

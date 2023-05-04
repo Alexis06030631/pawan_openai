@@ -1,0 +1,6 @@
+node_modules/
+test.js
+.Ds_Store
+
+package-lock.json
+.idea/
