@@ -16,7 +16,7 @@ npm install pawan_openai
 ### Usage (See [OpenAI API Docs](https://github.com/openai/openai-node)) for more details.
 
 ```js
-const {OpenAIApi, Configuration} = require('pawan-openai');
+const {OpenAIApi, Configuration} = require('pawan_openai');
 
 const configuration = new Configuration({
 	"apiKey": YOUR_PAWAN_API_KEY,
@@ -25,9 +25,9 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-openai.completions.create({
-    engine: 'davinci',
-    prompt: 'This is a test'
+openai.createCompletion({
+	model: "davinci-codex",
+	prompt: "Say this is a test"
 }).then(console.log).catch(console.error);
 ```
 
