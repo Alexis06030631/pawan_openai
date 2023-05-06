@@ -26,8 +26,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+// @ts-ignore
 const process_1 = require("process");
 const axios_1 = __importDefault(require("axios"));
+// @ts-ignore
 const package_Dt = __importStar(require("../package.json"));
 const url = "https://registry.npmjs.org/pawan_openai";
 const colors = {

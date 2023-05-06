@@ -4,7 +4,7 @@
 	"description": "An extension of the OpenAI module to use it with the Pawan API without worrying about IP errors.",
 	"scripts": {
 		"test": "node test.js",
-		"publish": "node run build && npm publish --access public",
+		"publish": "npm run build && npm publish --access public",
 		"build": "tsc"
 	},
 	"main": "./dist/index.js",
@@ -32,6 +32,7 @@
 		"openai": "^3.2.1"
 	},
 	"devDependencies": {
+		"@types/node": "^20.1.0",
 		"typescript": "^5.0.4"
 	},
 	"release": {
