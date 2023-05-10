@@ -17,7 +17,7 @@ const codes = {
 	invalid_ip: 'Your API key is not allowed to be used from this IP address'
 }
 
-class OpenAiApi extends openAi.OpenAIApi {
+class PawanOpenai extends openAi.OpenAIApi {
 	constructor(configuration: openAi.Configuration) {
 		super(configuration);
 	}
@@ -227,5 +227,5 @@ class OpenAiApi extends openAi.OpenAIApi {
 
 
 // Export OpenAIApi class
-export {OpenAIApi} from "openai";
+export {PawanOpenai as OpenAIApi};
 export {Configuration} from "openai";
