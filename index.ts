@@ -25,169 +25,182 @@ class PawanOpenai extends openAi.OpenAIApi {
 	// @ts-ignore
 	cancelFineTune(fineTuneId: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.cancelFineTune(fineTuneId, options));
+		return this.MakeRequest('cancelFineTune', fineTuneId, options);
 	}
 
 	// @ts-ignore
 	createAnswer(createAnswerRequest: CreateAnswerRequest, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createAnswer(createAnswerRequest, options));
+		return this.MakeRequest('createAnswer', createAnswerRequest, options);
 	}
 
 	// @ts-ignore
 	createChatCompletion(createChatCompletionRequest: CreateChatCompletionRequest, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createChatCompletion(createChatCompletionRequest, options));
+		return this.MakeRequest('createChatCompletion', createChatCompletionRequest, options);
 	}
 
 	// @ts-ignore
 	createClassification(createClassificationRequest: CreateClassificationRequest, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createClassification(createClassificationRequest, options));
+		return this.MakeRequest('createClassification', createClassificationRequest, options);
 	}
 
 	// @ts-ignore
 	createCompletion(createCompletionRequest: CreateCompletionRequest, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createCompletion(createCompletionRequest, options));
+		return this.MakeRequest('createCompletion', createCompletionRequest, options);
 	}
 
 	// @ts-ignore
 	createEdit(createEditRequest: CreateEditRequest, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createEdit(createEditRequest, options));
+		return this.MakeRequest('createEdit', createEditRequest, options);
 	}
 
 	// @ts-ignore
 	createEmbedding(createEmbeddingRequest: CreateEmbeddingRequest, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createEmbedding(createEmbeddingRequest, options));
+		return this.MakeRequest('createEmbedding', createEmbeddingRequest, options);
 	}
 
 	// @ts-ignore
 	createFile(file: File, purpose: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createFile(file, purpose, options));
+		return this.MakeRequest('createFile', file, purpose, options);
 	}
 
 	// @ts-ignore
 	createFineTune(createFineTuneRequest: CreateFineTuneRequest, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createFineTune(createFineTuneRequest, options));
+		return this.MakeRequest('createFineTune', createFineTuneRequest, options);
 	}
 
 	// @ts-ignore
 	createImage(createImageRequest: CreateImageRequest, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createImage(createImageRequest, options));
+		return this.MakeRequest('createImage', createImageRequest, options);
 	}
 
 	// @ts-ignore
 	createImageEdit(image: File, prompt: string, mask?: File, n?: number, size?: string, responseFormat?: string, user?: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createImageEdit(image, prompt, mask, n, size, responseFormat, user, options));
+		return this.MakeRequest('createImageEdit', image, prompt, mask, n, size, responseFormat, user, options);
 	}
 
 	// @ts-ignore
 	createImageVariation(image: File, n?: number, size?: string, responseFormat?: string, user?: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createImageVariation(image, n, size, responseFormat, user, options));
+		return this.MakeRequest('createImageVariation', image, n, size, responseFormat, user, options);
 	}
 
 	// @ts-ignore
 	createModeration(createModerationRequest: CreateModerationRequest, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createModeration(createModerationRequest, options));
+		return this.MakeRequest('createModeration', createModerationRequest, options);
 	}
 
 	// @ts-ignore
 	createSearch(engineId: string, createSearchRequest: CreateSearchRequest, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createSearch(engineId, createSearchRequest, options));
+		return this.MakeRequest('createSearch', engineId, createSearchRequest, options);
 	}
 
 	// @ts-ignore
 	createTranscription(file: File, model: string, prompt?: string, responseFormat?: string, temperature?: number, language?: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createTranscription(file, model, prompt, responseFormat, temperature, language, options));
+		return this.MakeRequest('createTranscription', file, model, prompt, responseFormat, temperature, language, options);
 	}
 
 	// @ts-ignore
 	createTranslation(file: File, model: string, prompt?: string, responseFormat?: string, temperature?: number, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.createTranslation(file, model, prompt, responseFormat, temperature, options));
+		return this.MakeRequest('createTranslation', file, model, prompt, responseFormat, temperature, options);
 	}
 
 	// @ts-ignore
 	deleteFile(fileId: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.deleteFile(fileId, options));
+		return this.MakeRequest('deleteFile', fileId, options);
 	}
 
 	// @ts-ignore
 	deleteModel(model: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.deleteModel(model, options));
+		return this.MakeRequest('deleteModel', model, options);
 	}
 
 	// @ts-ignore
 	downloadFile(fileId: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.downloadFile(fileId, options));
+		return this.MakeRequest('downloadFile', fileId, options);
 	}
 
 	// @ts-ignore
 	listEngines(options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.listEngines(options));
+		return this.MakeRequest('listEngines', options);
 	}
 
 	// @ts-ignore
 	listFiles(options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.listFiles(options));
+		return this.MakeRequest('listFiles', options);
 	}
 
 	// @ts-ignore
 	listFineTuneEvents(fineTuneId: string, stream?: boolean, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.listFineTuneEvents(fineTuneId, stream, options));
+		return this.MakeRequest('listFineTuneEvents', fineTuneId, stream, options);
 	}
 
 	// @ts-ignore
 	listFineTunes(options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.listFineTunes(options));
+		return this.MakeRequest('listFineTunes', options);
 	}
 
 	// @ts-ignore
 	listModels(options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.listModels(options));
+		return this.MakeRequest('listModels', options);
 	}
 
 	// @ts-ignore
 	retrieveEngine(engineId: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.retrieveEngine(engineId, options));
+		return this.MakeRequest('retrieveEngine', engineId, options);
 	}
 
 	// @ts-ignore
 	retrieveFile(fileId: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.retrieveFile(fileId, options));
+		return this.MakeRequest('retrieveFile', fileId, options);
 	}
 
 	// @ts-ignore
 	retrieveFineTune(fineTuneId: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.retrieveFineTune(fineTuneId, options));
+		return this.MakeRequest('retrieveFineTune', fineTuneId, options);
 	}
 
 	// @ts-ignore
 	retrieveModel(model: string, options?: AxiosRequestConfig) {
 		// @ts-ignore
-		return this.CheckError(super.retrieveModel(model, options));
+		return this.MakeRequest('retrieveModel', model, options);
+	}
+
+
+	async MakeRequest(method:string, ...params: any[]) {
+		return new Promise((resolve, reject) => {
+			// @ts-ignore
+			this.CheckError(super[method](...params)).then((response) => {
+				resolve(response);
+			}).catch((error) => {
+				if(error.isIpError) resolve(this.MakeRequest(method, ...params));
+				else reject(error);
+			})
+		})
 	}
 
 	/**
@@ -200,9 +213,11 @@ class PawanOpenai extends openAi.OpenAIApi {
 			promise.then((response) => {
 				resolve(response);
 			}).catch((error) => {
+				error.isIpError = false;
 				if(error.response.data.error.message.includes(codes.invalid_ip)) {
 					this.authNewIp().then(_=>{
-						resolve(promise)
+						error.isIpError = true;
+						reject(error)
 					}).catch((error) => {
 						reject(error);
 					})

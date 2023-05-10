@@ -42,149 +42,165 @@ const axios_1 = __importDefault(require("axios"));
 const codes = {
     invalid_ip: 'Your API key is not allowed to be used from this IP address'
 };
-class OpenAiApi extends openAi.OpenAIApi {
+class PawanOpenai extends openAi.OpenAIApi {
     constructor(configuration) {
         super(configuration);
     }
     // @ts-ignore
     cancelFineTune(fineTuneId, options) {
         // @ts-ignore
-        return this.CheckError(super.cancelFineTune(fineTuneId, options));
+        return this.MakeRequest('cancelFineTune', fineTuneId, options);
     }
     // @ts-ignore
     createAnswer(createAnswerRequest, options) {
         // @ts-ignore
-        return this.CheckError(super.createAnswer(createAnswerRequest, options));
+        return this.MakeRequest('createAnswer', createAnswerRequest, options);
     }
     // @ts-ignore
     createChatCompletion(createChatCompletionRequest, options) {
         // @ts-ignore
-        return this.CheckError(super.createChatCompletion(createChatCompletionRequest, options));
+        return this.MakeRequest('createChatCompletion', createChatCompletionRequest, options);
     }
     // @ts-ignore
     createClassification(createClassificationRequest, options) {
         // @ts-ignore
-        return this.CheckError(super.createClassification(createClassificationRequest, options));
+        return this.MakeRequest('createClassification', createClassificationRequest, options);
     }
     // @ts-ignore
     createCompletion(createCompletionRequest, options) {
         // @ts-ignore
-        return this.CheckError(super.createCompletion(createCompletionRequest, options));
+        return this.MakeRequest('createCompletion', createCompletionRequest, options);
     }
     // @ts-ignore
     createEdit(createEditRequest, options) {
         // @ts-ignore
-        return this.CheckError(super.createEdit(createEditRequest, options));
+        return this.MakeRequest('createEdit', createEditRequest, options);
     }
     // @ts-ignore
     createEmbedding(createEmbeddingRequest, options) {
         // @ts-ignore
-        return this.CheckError(super.createEmbedding(createEmbeddingRequest, options));
+        return this.MakeRequest('createEmbedding', createEmbeddingRequest, options);
     }
     // @ts-ignore
     createFile(file, purpose, options) {
         // @ts-ignore
-        return this.CheckError(super.createFile(file, purpose, options));
+        return this.MakeRequest('createFile', file, purpose, options);
     }
     // @ts-ignore
     createFineTune(createFineTuneRequest, options) {
         // @ts-ignore
-        return this.CheckError(super.createFineTune(createFineTuneRequest, options));
+        return this.MakeRequest('createFineTune', createFineTuneRequest, options);
     }
     // @ts-ignore
     createImage(createImageRequest, options) {
         // @ts-ignore
-        return this.CheckError(super.createImage(createImageRequest, options));
+        return this.MakeRequest('createImage', createImageRequest, options);
     }
     // @ts-ignore
     createImageEdit(image, prompt, mask, n, size, responseFormat, user, options) {
         // @ts-ignore
-        return this.CheckError(super.createImageEdit(image, prompt, mask, n, size, responseFormat, user, options));
+        return this.MakeRequest('createImageEdit', image, prompt, mask, n, size, responseFormat, user, options);
     }
     // @ts-ignore
     createImageVariation(image, n, size, responseFormat, user, options) {
         // @ts-ignore
-        return this.CheckError(super.createImageVariation(image, n, size, responseFormat, user, options));
+        return this.MakeRequest('createImageVariation', image, n, size, responseFormat, user, options);
     }
     // @ts-ignore
     createModeration(createModerationRequest, options) {
         // @ts-ignore
-        return this.CheckError(super.createModeration(createModerationRequest, options));
+        return this.MakeRequest('createModeration', createModerationRequest, options);
     }
     // @ts-ignore
     createSearch(engineId, createSearchRequest, options) {
         // @ts-ignore
-        return this.CheckError(super.createSearch(engineId, createSearchRequest, options));
+        return this.MakeRequest('createSearch', engineId, createSearchRequest, options);
     }
     // @ts-ignore
     createTranscription(file, model, prompt, responseFormat, temperature, language, options) {
         // @ts-ignore
-        return this.CheckError(super.createTranscription(file, model, prompt, responseFormat, temperature, language, options));
+        return this.MakeRequest('createTranscription', file, model, prompt, responseFormat, temperature, language, options);
     }
     // @ts-ignore
     createTranslation(file, model, prompt, responseFormat, temperature, options) {
         // @ts-ignore
-        return this.CheckError(super.createTranslation(file, model, prompt, responseFormat, temperature, options));
+        return this.MakeRequest('createTranslation', file, model, prompt, responseFormat, temperature, options);
     }
     // @ts-ignore
     deleteFile(fileId, options) {
         // @ts-ignore
-        return this.CheckError(super.deleteFile(fileId, options));
+        return this.MakeRequest('deleteFile', fileId, options);
     }
     // @ts-ignore
     deleteModel(model, options) {
         // @ts-ignore
-        return this.CheckError(super.deleteModel(model, options));
+        return this.MakeRequest('deleteModel', model, options);
     }
     // @ts-ignore
     downloadFile(fileId, options) {
         // @ts-ignore
-        return this.CheckError(super.downloadFile(fileId, options));
+        return this.MakeRequest('downloadFile', fileId, options);
     }
     // @ts-ignore
     listEngines(options) {
         // @ts-ignore
-        return this.CheckError(super.listEngines(options));
+        return this.MakeRequest('listEngines', options);
     }
     // @ts-ignore
     listFiles(options) {
         // @ts-ignore
-        return this.CheckError(super.listFiles(options));
+        return this.MakeRequest('listFiles', options);
     }
     // @ts-ignore
     listFineTuneEvents(fineTuneId, stream, options) {
         // @ts-ignore
-        return this.CheckError(super.listFineTuneEvents(fineTuneId, stream, options));
+        return this.MakeRequest('listFineTuneEvents', fineTuneId, stream, options);
     }
     // @ts-ignore
     listFineTunes(options) {
         // @ts-ignore
-        return this.CheckError(super.listFineTunes(options));
+        return this.MakeRequest('listFineTunes', options);
     }
     // @ts-ignore
     listModels(options) {
         // @ts-ignore
-        return this.CheckError(super.listModels(options));
+        return this.MakeRequest('listModels', options);
     }
     // @ts-ignore
     retrieveEngine(engineId, options) {
         // @ts-ignore
-        return this.CheckError(super.retrieveEngine(engineId, options));
+        return this.MakeRequest('retrieveEngine', engineId, options);
     }
     // @ts-ignore
     retrieveFile(fileId, options) {
         // @ts-ignore
-        return this.CheckError(super.retrieveFile(fileId, options));
+        return this.MakeRequest('retrieveFile', fileId, options);
     }
     // @ts-ignore
     retrieveFineTune(fineTuneId, options) {
         // @ts-ignore
-        return this.CheckError(super.retrieveFineTune(fineTuneId, options));
+        return this.MakeRequest('retrieveFineTune', fineTuneId, options);
     }
     // @ts-ignore
     retrieveModel(model, options) {
         // @ts-ignore
-        return this.CheckError(super.retrieveModel(model, options));
+        return this.MakeRequest('retrieveModel', model, options);
+    }
+    MakeRequest(method, ...params) {
+        const _superIndex = name => super[name];
+        return __awaiter(this, void 0, void 0, function* () {
+            return new Promise((resolve, reject) => {
+                // @ts-ignore
+                this.CheckError(_superIndex(method).call(this, ...params)).then((response) => {
+                    resolve(response);
+                }).catch((error) => {
+                    if (error.isIpError)
+                        resolve(this.MakeRequest(method, ...params));
+                    else
+                        reject(error);
+                });
+            });
+        });
     }
     /**
      * Checks if the error is an invalid IP error and resets the IP if it is
@@ -197,9 +213,11 @@ class OpenAiApi extends openAi.OpenAIApi {
                 promise.then((response) => {
                     resolve(response);
                 }).catch((error) => {
+                    error.isIpError = false;
                     if (error.response.data.error.message.includes(codes.invalid_ip)) {
                         this.authNewIp().then(_ => {
-                            resolve(promise);
+                            error.isIpError = true;
+                            reject(error);
                         }).catch((error) => {
                             reject(error);
                         });
@@ -227,8 +245,6 @@ class OpenAiApi extends openAi.OpenAIApi {
         });
     }
 }
-// Export OpenAIApi class
+exports.OpenAIApi = PawanOpenai;
 var openai_1 = require("openai");
-Object.defineProperty(exports, "OpenAIApi", { enumerable: true, get: function () { return openai_1.OpenAIApi; } });
-var openai_2 = require("openai");
-Object.defineProperty(exports, "Configuration", { enumerable: true, get: function () { return openai_2.Configuration; } });
+Object.defineProperty(exports, "Configuration", { enumerable: true, get: function () { return openai_1.Configuration; } });

@@ -1,6 +1,6 @@
 {
 	"name": "pawan_openai",
-	"version": "1.1.0",
+	"version": "1.1.2",
 	"description": "An extension of the OpenAI module to use it with the Pawan API without worrying about IP errors.",
 	"scripts": {
 		"test": "node test.js",
